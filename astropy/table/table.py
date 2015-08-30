@@ -2203,12 +2203,11 @@ class Table(object):
                 out[name] = Column(data=data, name=name)
 
         return cls(out)
-
-    info = TableInfo()
-    
+        
     def zero_length_copy(self):
       return Table(self[:0])
 
+    info = TableInfo()
 
 class QTable(Table):
     """A class to represent tables of heterogeneous data.
