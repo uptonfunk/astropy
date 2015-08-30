@@ -2205,6 +2205,9 @@ class Table(object):
         return cls(out)
 
     info = TableInfo()
+    
+    def zero_length_copy(self):
+      return Table(self[:0])
 
 
 class QTable(Table):
